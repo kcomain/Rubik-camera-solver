@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!--Author: Arturo Blazquez Perez (arturobl.com) <arturo.blazquezperez@gmail.com>
+
+Feel free to use, redistribute, change, or do anything with the code, just notify
+me and give proper credit to me as the author.-->
+
+<html>
+    <head>
+        <title>Rubik solver</title>
+        <meta charset="utf-8">
+        <meta content="Rubik, cube, solver, camera, solve, Rubik's cube, Rubik's" name="keywords">
+        <meta content="Rubik's cube solver with camera." name="description">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        
+        <link rel="icon" sizes="192x192" href="logo.png">
+        <link rel="shortcut icon" href="logo.png">
+        
+        <script type="text/javascript" src="js/libs/jquery/jquery.js"></script>
+        <script type="text/javascript" src="js/cube.js"></script>
+        <script type="text/javascript" src="js/solve.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/css.css">
+        <script language="javascript" src="js/js.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+        <script src="build/tracking-min.js"></script>
+    </head>
+    <body onload="cargarWebcam(); checkOrientation(); loadKeyboard();" onresize="checkOrientation()">
+        <div id='rotatepls' style="z-index: 9999999;">
+            <h1>Por favor, rota la pantalla</h1>
+        </div>
+        
+        <div id="container">
+            <video id="myVideo" preload autoplay loop muted>
+
+            </video>
+        </div>
+        
+        <div id='cubo1'></div>
+        <div id='cubo2'></div>
+        <div id='cubo3'></div>
+        <div id='cubo4'></div>
+        
+        <div id='cubo6'></div>
+        <div id='cubo7'></div>
+        <div id='cubo8'></div>
+        <div id='cubo9'></div>
+        
+        
+        
+        <button onclick="getColors()" id='boton'>
+            get colors
+        </button>
+        
+        <canvas id="c"></canvas>
+        
+        <div id='cubo'>
+            <div id='tile1'></div>
+            <div id='tile2'></div>
+            <div id='tile3'></div>
+            <div id='tile4'></div>
+            <div id='tile5'></div>
+            <div id='tile6'></div>
+            <div id='tile7'></div>
+            <div id='tile8'></div>
+            <div id='tile9'></div>
+        </div>
+        
+        <button onclick="saveColors()" id='next'>
+            Next
+        </button>
+    </body>
+</html>
